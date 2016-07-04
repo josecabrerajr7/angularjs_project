@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Justified Nav Template for Bootstrap</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/justified-nav.css" rel="stylesheet">
+      <!-- css style -->
+      <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- including the navbar -->
+      <header id="header" ng-include="'views/includes/header.html'"></header>
+      
+      <div ui-view></div>
+    </div> <!-- /container -->
+
+    <footer id="footer" ng-include="'views/includes/footer.html'"></footer>
+
+    <!-- vendors scripts -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <script src="js/vendors/angular.min.js"></script>
+    <script src="js/vendors/angular-ui-router.min.js"></script>
+
+    <!-- linking to var module of angular -->
+    <script src="js/app.module.js"></script>
+    <script src="js/app.config.js"></script>
+
+    <!-- loading the controllers -->
+    <script src="js/controller/main.controller.js"></script>
+    <script src="js/controller/about.controller.js"></script>
+    <script src="js/controller/services.controller.js"></script>
+    <script src="js/controller/contact.controller.js"></script>
+
+    <!-- loading services -->
+    <script src="js/services/logger.service.js"></script>
+    
+  </body>
+</html>
