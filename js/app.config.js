@@ -2,11 +2,11 @@ angular
 	.module('app')
 	.config(function($stateProvider, $urlRouterProvider) {
 		// this will default to this route if there is no other page
-		$urlRouterProvider.otherwise("/home");
+		$urlRouterProvider.otherwise("/");
 
 		$stateProvider
 			.state("home", {
-				url: "/welcome",
+				url: "/",
 				templateUrl: "views/main.html",
 				controller: "MainController"
 			})
