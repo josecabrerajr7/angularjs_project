@@ -7,23 +7,31 @@
 		.factory('dataService', dataService);
 
 		// injecting $http and logger
-		dataService.$inject = ['$http', 'logger'];
+		dataService.$inject = ['$http'];
 
-		function dataService($http, logger) {
+		function dataService($http) {
+
+			return {
+				getServices: getServices
+			};
+			
 			// going to get the data from the json file
-			return $http.get('js/data/services.json')
-				// if getting data was success it will run this
-				.then(getServicesComplete)
-				// if getting data fails then returns errors
-				.catch(getServicesFailed);
+			function getServices() {
+				return $http.get('js/data/services.json')
+					// if getting data was success it will run this
+					.then(getServicesComplete)
+					// if data was a failure it well throw and error 
+					.catch(getServicesFailed);
+
 
 				function getServicesComplete(response) {
-					return response.data.results;
+					return response.data;
 				}
 
 				function getServicesFailed(error) {
-					logger.error('XHR Failed for getServices.' + error.data);
+					console.log('XHR Failed for getServices.' + error.data);
 				}
+			}
 		}
 
 

@@ -1,0 +1,24 @@
+[
+	{
+		"id": 1,
+		"location": "Kingsburg Locaation",
+		"address": "962 Vineyard Way",
+		"city": "Kingsburg, CA 93631",
+		"phone": "Phone #: 552-245-5236"
+	},
+	{
+		"id": 2,
+		"location": "Kingsburg Locaation",
+		"address": "962 Vineyard Way",
+		"city": "Kingsburg, CA 93631",
+		"phone": "Phone #: 552-245-5236"
+	},
+	{
+		"id": 3,
+		"location": "Kingsburg Locaation",
+		"address": "962 Vineyard Way",
+		"city": "Kingsburg, CA 93631",
+		"phone": "Phone #: 552-245-5236"
+	}
+
+]

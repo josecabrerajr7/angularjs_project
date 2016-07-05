@@ -1,26 +1,14 @@
 <section ng-controller="ContactController as contact">
 <div class="row">
   <div class="col-lg-12">
-    <h2>Contact</h2>
-    <p>Please email suport@google.com</p>
-    <h3>Locations</h3>
-    <ul class="location">
-      <li>Fresno</li>
-      <li>962 Vineyard Way</li>
-      <li>Kingsburg, CA 93631</li>
-      <li>Phone #: 552-245-5236</li>
-    </ul>
-    <ul class="location">
-      <li>Fresno</li>
-      <li>962 Vineyard Way</li>
-      <li>Kingsburg, CA 93631</li>
-      <li>Phone #: 552-245-5236</li>
-    </ul>
-    <ul class="location">
-      <li>Fresno</li>
-      <li>962 Vineyard Way</li>
-      <li>Kingsburg, CA 93631</li>
-      <li>Phone #: 552-245-5236</li>
+    <h2>{{ contact.title }}</h2>
+    <p>Please email {{ contact.email }}</p>
+    <h3>{{ contact.locations }}</h3>
+    <ul class="location" ng-repeat="module in contact.contacts">
+      <li>{{ module.location }}</li>
+      <li>{{ module.address }}</li>
+      <li>{{ module.city }}</li>
+      <li>{{ module.phone }}</li>
     </ul>
   </div>
 </div>

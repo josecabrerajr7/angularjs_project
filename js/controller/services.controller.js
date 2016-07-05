@@ -7,31 +7,29 @@
     	.controller('ServicesController', ServicesController);
 
         // now going to connect to the factory to get the data in the controller
-        ServicesController.$inject = ['dataService', 'logger'];
+        ServicesController.$inject = ['dataService'];
 
     /**
      * @name ServicesController
      * @desc Services page info
      **/
-	function ServicesController(dataService, logger) {
+	function ServicesController(dataService) {
 		var vm = this;
-        vm.offers = [];
-
-        vm.dataService = dataService;
+        vm.services = [];
 
         activate();
 
         function activate() {
             return getServices().then(function() {
-                logger.info('Activated Services View');
+                console.log('activate services view');
             });
         }
 
         function getServices() {
             return dataService.getServices()
                 .then(function(data) {
-                    vm.offers = data;
-                    return vm.offers;
+                    vm.services = data;
+                    return vm.services;
                 });
         }
 	}
